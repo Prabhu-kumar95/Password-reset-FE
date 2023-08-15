@@ -23,7 +23,7 @@ function Dash() {
   };
   useEffect(() => {
     DashValid();
-  }, []);
+  });
   return (
     <div>
       <div className="cardcontainer">
