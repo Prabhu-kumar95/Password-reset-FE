@@ -1,0 +1,62 @@
+.buttonsection{
+display: flex;
+}
+.FormContainer{
+  margin-left: 500px;
+  margin-top: 120px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 450px;
+width: 400px;
+background-color: white;
+border-radius: 10px;
+}
+.Text{
+  margin: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: small;
+  
+}
+.FP{
+  margin-left: 120px;
+  
+ 
+}
+.button{
+  border: none;
+  color: red;
+  background-color: white;
+  
+ 
+  font-size:0.8rem;
+}
+.btn{
+  width: 283px;
+}
+body{
+  background-color: rgb(24, 149, 233);
+}
+.cardcontainer {
+  margin-left: 500px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+}
+.FormContainer1 {
+  margin-left: 500px;
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+}
+
