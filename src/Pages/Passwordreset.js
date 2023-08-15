@@ -8,7 +8,7 @@ const Passwordreset = () => {
   const history = useNavigate();
 
   const [password, setPassword] = useState("");
-  const [message] = useState("");
+  
 
   const userValid = async () => {
     const res = await fetch(`http://localhost:5000/api/forgotpassword/${id}/${token}`, {
@@ -50,7 +50,7 @@ const Passwordreset = () => {
 
   useEffect(() => {
     userValid();
-  }, []);
+  });
 
   return (
     <div>
