@@ -50,6 +50,7 @@ function SignUp() {
         SetInpVal({ ...inpVal, fullname: "", email: "", password: "" });
       } else {
         alert("user already exists");
+        SetInpVal({ ...inpVal, fullname: "", email: "", password: "" });
       }
     }
   };
