@@ -50,7 +50,7 @@ const Passwordreset = () => {
 
   useEffect(() => {
     userValid();
-  },[]);
+  });
 
   return (
     <div>
