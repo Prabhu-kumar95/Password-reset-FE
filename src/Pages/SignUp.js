@@ -32,7 +32,7 @@ function SignUp() {
       alert("please enter password");
     } else {
       // console.log("user registration successfully");
-      const data = await fetch("http://localhost:5000/api/user", {
+      const data = await fetch("https://password-resets.onrender.com/api/user", {
         method: "POST",
 
         headers: {

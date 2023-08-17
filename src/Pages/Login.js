@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Login() {
   const [inpVal, SetInpVal] = useState({
     email: "",
@@ -17,7 +17,7 @@ function Login() {
       };
     });
   };
-  const history = useNavigate();
+
   const logindata = async (e) => {
     e.preventDefault();
 
@@ -28,7 +28,7 @@ function Login() {
       alert("please enter your password");
     } else {
       //
-      const data = await fetch("http://localhost:5000/api/login", {
+      const data = await fetch("https://password-resets.onrender.com/api/login", {
         method: "POST",
 
         headers: {
@@ -44,7 +44,7 @@ function Login() {
       console.log(res);
       if (res.status === 201) {
         localStorage.setItem("usersdatatoken", res.result.token);
-        history("/Dash");
+        alert("You logged in successfully thank you !!!")
         SetInpVal({ ...inpVal, email: "", password: "" });
       }else{
         alert("Password incorrect")
