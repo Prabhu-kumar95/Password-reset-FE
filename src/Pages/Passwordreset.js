@@ -31,7 +31,7 @@ const Passwordreset = () => {
   const sendpassword = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`http://localhost:5000/api/${id}/${token}`, {
+    const res = await fetch(`https://password-resets.onrender.com/api/${id}/${token}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
