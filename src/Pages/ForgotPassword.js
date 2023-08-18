@@ -17,8 +17,8 @@ function ForgotPassword() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email,
-      }),
+        email
+      })
     });
     const data = await res.json();
     if (data.status === 201) {
