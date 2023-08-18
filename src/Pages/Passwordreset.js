@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
@@ -10,20 +10,20 @@ const Passwordreset = () => {
   const [password, setPassword] = useState("");
   
 
-  const userValid = async () => {
-    const res = await fetch(`https://password-resets.onrender.com/api/forgotpassword/${id}/${token}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await res.json();
-    if (data.status === 201) {
-      console.log("user valid");
-    } else {
-      history("*");
-    }
-  };
+  // const userValid = async () => {
+  //   const res = await fetch(`https://password-resets.onrender.com/api/forgotpassword/${id}/${token}`, {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
+  //   const data = await res.json();
+  //   if (data.status === 201) {
+  //     console.log("user valid");
+  //   } else {
+  //     history("*");
+  //   }
+  // };
   const setVal = (e) => {
     setPassword(e.target.value);
   };
@@ -48,9 +48,9 @@ const Passwordreset = () => {
     }
   };
 
-  useEffect(() => {
-    userValid();
-  });
+  // useEffect(() => {
+  //   userValid();
+  // });
 
   return (
     <div>
