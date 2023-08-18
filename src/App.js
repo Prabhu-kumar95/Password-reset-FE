@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/Dash" Component={Dash} />
         <Route
           exact
-          path="forgotpassword/:id/:token"
+          path="/forgotpassword/:id/:token"
           Component={Passwordreset}
         />
         <Route exact path="*" Component={Error} />
