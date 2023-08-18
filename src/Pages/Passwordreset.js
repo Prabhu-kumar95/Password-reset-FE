@@ -50,7 +50,8 @@ const Passwordreset = () => {
 
   useEffect(() => {
     userValid();
-  });
+     // eslint-disable-next-line
+  },[]);
 
   return (
     <div>
