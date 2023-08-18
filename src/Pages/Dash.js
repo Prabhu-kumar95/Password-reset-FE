@@ -6,7 +6,7 @@ function Dash() {
   const DashValid = async () => {
     let token = localStorage.getItem("usersdatatoken");
 
-    const res = await fetch("http://localhost:5000/api/validuser", {
+    const res = await fetch("https://password-resets.onrender.com/api/validuser", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
