@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 function Login() {
   const [inpVal, SetInpVal] = useState({
     email: "",
@@ -17,7 +17,7 @@ function Login() {
       };
     });
   };
-
+  const history = useNavigate();
   const logindata = async (e) => {
     e.preventDefault();
 
@@ -44,7 +44,7 @@ function Login() {
       console.log(res);
       if (res.status === 201) {
         localStorage.setItem("usersdatatoken", res.result.token);
-        alert("You logged in successfully thank you !!!")
+        history("/Dash");
         SetInpVal({ ...inpVal, email: "", password: "" });
       }else{
         alert("Password incorrect")
