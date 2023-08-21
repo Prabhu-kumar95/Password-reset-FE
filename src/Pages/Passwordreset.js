@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { BASE_URL } from "./helper";
+
 
 const Passwordreset = () => {
   const { id, token } = useParams();
@@ -12,7 +12,7 @@ const Passwordreset = () => {
   
 
   const userValid = async () => {
-    const res = await fetch(`${BASE_URL}/api/forgotpassword/${id}/${token}`, {
+    const res = await fetch(`https://password-resets.onrender.com/api/forgotpassword/${id}/${token}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ const Passwordreset = () => {
   const sendpassword = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`${BASE_URL}/api/${id}/${token}`, {
+    const res = await fetch(`https://password-resets.onrender.com/api/${id}/${token}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
