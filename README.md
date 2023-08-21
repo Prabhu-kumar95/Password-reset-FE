@@ -1,4 +1,9 @@
+Before Testing this function of App(password-reset-flow) First user should registered his/her email through SignUp Page.
+
+FrontEnd link :https://reset-user-password.netlify.app/
+
 # Getting Started with Create React App
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
